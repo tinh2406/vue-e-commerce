@@ -1,9 +1,11 @@
 import { Api } from '@/services/api'
 
-const baseUrl = `${import.meta.env.VITE_API_URL}`
+export const SERVER_URL = 'http://10.0.166.14:8000'
+export const API_URL = `${SERVER_URL}/api/v1`
+export const LOGO_URL = `${SERVER_URL}/static/paradoxlogo.png`
 
 export const api = new Api({
-  baseUrl,
+  baseUrl: API_URL,
   securityWorker: async () => {
     const token = localStorage.getItem('accessToken')
     return token ? { headers: { Authorization: `Bearer ${token}` } } : {}

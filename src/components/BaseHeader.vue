@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between items-center p-4 xl:w-[96rem] mx-auto">
+  <nav class="flex justify-between items-center p-4 w-full 2xl:w-[96rem] mx-auto">
     <NavbarBrand />
     <ProductSearch />
     <div class="flex items-center gap-2">

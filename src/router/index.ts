@@ -25,6 +25,10 @@ const ProfileView = () => import('@/views/settings/ProfileView.vue')
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    { path: '/login', name: 'login', component: LoginView },
+    { path: '/signup', name: 'signup', component: SignUpView },
+    { path: '/reset-password', name: ' reset-password', component: ResetPasswordView },
+    { path: '/forgot-password', name: ' forgot-password', component: ForgotPasswordView },
     {
       path: '/',
       name: 'homelayout',
@@ -54,11 +58,6 @@ export const router = createRouter({
         }
       ]
     },
-
-    { path: '/login', name: 'login', component: LoginView },
-    { path: '/signup', name: 'signup', component: SignUpView },
-    { path: '/reset-password', name: ' reset-password', component: ResetPasswordView },
-    { path: '/forgot-password', name: ' forgot-password', component: ForgotPasswordView },
     {
       path: '/management',
       meta: { requiresAuth: true, role: [ROLE_ADMIN, ROLE_STAFF] },
